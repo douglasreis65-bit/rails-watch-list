@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="row">
+    <% @lists.each do |list| %>
+
+      <div class="col-md-3">
+        <div class="list-card">
+
+          <div class="list-images">
+            <% list.movies.first(4).each do |movie| %>
+              <img src="<%= movie.poster_url %>">
+            <% end %>
+          </div>
+
+          <div class="p-3">
+            <h5><%= list.name %></h5>
+
+            <p class="text-muted">
+              <%= list.movies.count %> filmes
+            </p>
+
+            <%= link_to "Ver lista", list_path(list), class: "btn btn-sm btn-warning" %>
+          </div>
+
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>

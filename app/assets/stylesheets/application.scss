@@ -10,3 +10,270 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+/* --------- GLOBAL --------- */
+
+body {
+  background-color: #0f0f0f;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --------- LIST CARDS --------- */
+
+.list-card {
+  background: linear-gradient(145deg, #2a2a2a, #1c1c1c);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+}
+
+.list-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.9);
+  border: 1px solid rgba(255,215,0,0.4);
+}
+
+/* --------- MOVIE IMAGE GRID --------- */
+
+.list-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.list-images img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* --------- TEXT FIX (IMPORTANT) --------- */
+
+.list-card h5 {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.list-card p,
+.list-card span {
+  color: #e6e6e6 !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* padding interno do card */
+
+.list-card .p-3 {
+  padding: 18px !important;
+}
+
+/* --------- BUTTON STYLE --------- */
+
+.btn-warning {
+  background: linear-gradient(135deg, #ffd700, #ffb300);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #ffe347, #ffc400);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+}
+
+.navbar {
+  background: rgba(0,0,0,0.85) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+}
+/* ---------- MOVIE CARDS ---------- */
+
+.movie-card {
+  background: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  height: 100%;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.9);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-info h5 {
+  color: white;
+  font-weight: 600;
+}
+
+.movie-overview {
+  font-size: 13px;
+  color: #cfcfcf;
+}
+
+.movie-rating {
+  color: #ffd700;
+  font-weight: 500;
+}
+
+.bookmark-comment {
+  font-style: italic;
+  color: #bbbbbb;
+}
+
+.poster-wrapper {
+  position: relative;
+}
+
+.poster-wrapper {
+  position: relative;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.7);
+  padding: 8px;
+  border-radius: 50%;
+  color: #ff4d4d;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.delete-icon:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* ---------- BOOKMARK PAGE ---------- */
+
+.bookmark-page {
+  min-height: 80vh;
+}
+
+/* hero */
+
+.bookmark-hero {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.bookmark-hero h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.bookmark-hero p {
+  color: #bbbbbb;
+  font-size: 18px;
+}
+
+/* card */
+
+.bookmark-card {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 16px;
+
+  background: linear-gradient(145deg, #2a2a2a, #1c1c1c);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+/* inputs */
+
+.movie-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: #121212;
+  color: white;
+}
+
+.movie-comment {
+  width: 100%;
+  min-height: 120px;
+  margin-top: 8px;
+
+  padding: 12px;
+  border-radius: 8px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: #121212;
+  color: white;
+}
+
+/* spacing */
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* actions */
+
+.bookmark-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.movie-select-card {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.movie-select-card input {
+  display: none;
+}
+
+.movie-select-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.movie-select-card span {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.movie-select-card input:checked + img {
+  outline: 3px solid #ffd700;
+  transform: scale(1.05);
+}
