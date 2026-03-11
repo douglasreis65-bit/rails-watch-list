@@ -53,3 +53,13 @@
   </div>
 
 </div>
+
+<h1><%= @list.name %></h1>
+
+<% if @list.comment.present? %>
+  <p><%= @list.comment %></p>
+<% else %>
+  <p>Sem comentário ainda.</p>
+<% end %>
+
+<%= link_to "Adicionar comentário", edit_list_path(@list) %>
